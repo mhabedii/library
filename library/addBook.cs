@@ -71,7 +71,6 @@ namespace library
             this.Close();
             adminPanelForm adminpanelform = new adminPanelForm();
             adminpanelform.Show();
-
         }
     }
 }
