@@ -34,6 +34,7 @@ namespace library
                     shelfs.Add(manager);
                 }
             }
+
             return shelfs;
         }
         public void Delete(Shelf shelf)
