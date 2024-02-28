@@ -24,5 +24,13 @@ namespace library
 
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            bookSearch booksearch = new bookSearch();
+            booksearch.Show();
+        }
     }
 }

@@ -40,10 +40,10 @@ namespace library
             ShelfWriteRead shelfwriteread = new ShelfWriteRead(); 
             shelfwriteread.Write(shelf, filePath);
 
+            this.Close();
             adminPanelForm adminpanelform = new adminPanelForm();
             adminpanelform.Show();
 
-            this.Hide();
         }
     }
 }

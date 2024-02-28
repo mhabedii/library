@@ -35,6 +35,9 @@ namespace library
                 }
             }
             return shelfs;
+        }
+        public void Delete(Shelf shelf)
+        {
 
         }
     }

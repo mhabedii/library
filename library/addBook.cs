@@ -68,10 +68,10 @@ namespace library
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Close();
             adminPanelForm adminpanelform = new adminPanelForm();
             adminpanelform.Show();
 
-            this.Hide();
         }
     }
 }

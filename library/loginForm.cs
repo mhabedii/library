@@ -30,10 +30,11 @@ namespace library
 
             if (userBox.Text == "hesamtabesh" && passBox.Text == "1234")
             {
+                this.Close();
+
                 adminPanelForm adminPanelForm = new adminPanelForm();
                 adminPanelForm.Show();
 
-                this.Hide();
                 return;
             }
 
@@ -41,10 +42,11 @@ namespace library
             {
                 if (m.textOfUserName == userBox.Text && m.textOfPassword == passBox.Text)
                 {
+                    this.Hide();
                     userPanel userPanel = new userPanel();
                     userPanel.Show();
 
-                    this.Hide();
+
                     return;
                 }
                 else
@@ -63,10 +65,11 @@ namespace library
 
         private void registerBtn_Click(object sender, EventArgs e)
         {
+            this.Close();
+
             registerForm form2 = new registerForm();
             form2.Show();
 
-            this.Hide();
         }
 
         private void loginForm_Load(object sender, EventArgs e)

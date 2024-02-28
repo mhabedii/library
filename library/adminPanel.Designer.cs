@@ -39,6 +39,10 @@
             label1 = new Label();
             comboBox1 = new ComboBox();
             button4 = new Button();
+            button6 = new Button();
+            button7 = new Button();
+            button8 = new Button();
+            button9 = new Button();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
@@ -73,6 +77,8 @@
             // tabPage1
             // 
             tabPage1.BackColor = SystemColors.ScrollBar;
+            tabPage1.Controls.Add(button7);
+            tabPage1.Controls.Add(button6);
             tabPage1.Controls.Add(button5);
             tabPage1.Controls.Add(button1);
             tabPage1.Location = new Point(4, 35);
@@ -99,6 +105,8 @@
             // tabPage2
             // 
             tabPage2.BackColor = SystemColors.ScrollBar;
+            tabPage2.Controls.Add(button9);
+            tabPage2.Controls.Add(button8);
             tabPage2.Controls.Add(button3);
             tabPage2.Controls.Add(button2);
             tabPage2.ForeColor = SystemColors.ControlDarkDark;
@@ -132,7 +140,7 @@
             button2.Name = "button2";
             button2.Size = new Size(184, 38);
             button2.TabIndex = 0;
-            button2.Text = "افزودن کتاب";
+            button2.Text = "افزودن یک کتاب";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
@@ -187,6 +195,42 @@
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
+            // button6
+            // 
+            button6.Location = new Point(386, 259);
+            button6.Name = "button6";
+            button6.Size = new Size(206, 29);
+            button6.TabIndex = 2;
+            button6.Text = "ویرایش کاربران";
+            button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            button7.Location = new Point(386, 294);
+            button7.Name = "button7";
+            button7.Size = new Size(206, 29);
+            button7.TabIndex = 3;
+            button7.Text = "حذف یک کاربر";
+            button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            button8.Location = new Point(418, 304);
+            button8.Name = "button8";
+            button8.Size = new Size(184, 29);
+            button8.TabIndex = 2;
+            button8.Text = "ویرایش یک کتاب";
+            button8.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            button9.Location = new Point(418, 339);
+            button9.Name = "button9";
+            button9.Size = new Size(184, 29);
+            button9.TabIndex = 3;
+            button9.Text = "حذف یک کتاب";
+            button9.UseVisualStyleBackColor = true;
+            // 
             // adminPanelForm
             // 
             AutoScaleDimensions = new SizeF(9F, 26F);
@@ -218,5 +262,9 @@
         private ComboBox comboBox1;
         private Label label1;
         private Button button5;
+        private Button button7;
+        private Button button6;
+        private Button button9;
+        private Button button8;
     }
 }

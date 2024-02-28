@@ -43,10 +43,10 @@ namespace library
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Close();
             addBook addbook = new addBook();
             addbook.Show();
 
-            this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -57,10 +57,10 @@ namespace library
 
         private void button4_Click(object sender, EventArgs e)
         {
+            this.Close();
             addShelf addshelf = new addShelf();
             addshelf.Show();
 
-            this.Hide();
         }
 
         private void tabPage3_Click(object sender, EventArgs e)
@@ -70,9 +70,9 @@ namespace library
 
         private void button5_Click(object sender, EventArgs e)
         {
+            this.Close();
             loginForm loginform = new loginForm();
             loginform.Show();
-            this.Hide();
         }
     }
 }
