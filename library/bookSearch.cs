@@ -15,11 +15,16 @@ namespace library
         public bookSearch()
         {
             InitializeComponent();
+            clearLabel3Content();
+        }
+
+        private void clearLabel3Content()
+        {
+            label3.Text = string.Empty;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             string filePath = @"path/books-data.txt";
 
             List<Book> list = new List<Book>();
@@ -28,18 +33,20 @@ namespace library
 
             foreach (Book b in list)
             {
-                if (textBox1.Text == b.nameOfBook)
+                if (Convert.ToString(textBox1.Text) == Convert.ToString(b.nameOfBook))
                 {
-                    comboBox1.Items.Clear();
-                    comboBox1.Items.Add(b.nameOfBook);
+                    label3.Text = "موجود است";
+                    break;
+                }
+                else
+                {
+                    label3.Text = "موجود نیست";
                 }
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-
             this.Close();
             userPanel userpanel = new userPanel();
             userpanel.Show();

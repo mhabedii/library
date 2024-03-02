@@ -40,6 +40,8 @@
             comboBox1 = new ComboBox();
             label5 = new Label();
             button2 = new Button();
+            label6 = new Label();
+            checkBox1 = new CheckBox();
             SuspendLayout();
             // 
             // textBox1
@@ -56,7 +58,7 @@
             // 
             textBox2.BackColor = SystemColors.ControlDarkDark;
             textBox2.ForeColor = SystemColors.ScrollBar;
-            textBox2.Location = new Point(380, 221);
+            textBox2.Location = new Point(380, 217);
             textBox2.Margin = new Padding(3, 4, 3, 4);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(140, 31);
@@ -66,7 +68,7 @@
             // 
             textBox3.BackColor = SystemColors.ControlDarkDark;
             textBox3.ForeColor = SystemColors.ScrollBar;
-            textBox3.Location = new Point(380, 264);
+            textBox3.Location = new Point(380, 256);
             textBox3.Margin = new Padding(3, 4, 3, 4);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(140, 31);
@@ -76,7 +78,7 @@
             // 
             textBox4.BackColor = SystemColors.ControlDarkDark;
             textBox4.ForeColor = SystemColors.ScrollBar;
-            textBox4.Location = new Point(380, 307);
+            textBox4.Location = new Point(380, 295);
             textBox4.Margin = new Padding(3, 4, 3, 4);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(140, 31);
@@ -96,7 +98,7 @@
             // 
             label2.AutoSize = true;
             label2.ForeColor = SystemColors.ControlDarkDark;
-            label2.Location = new Point(549, 224);
+            label2.Location = new Point(549, 217);
             label2.Name = "label2";
             label2.Size = new Size(62, 26);
             label2.TabIndex = 6;
@@ -106,7 +108,7 @@
             // 
             label3.AutoSize = true;
             label3.ForeColor = SystemColors.ControlDarkDark;
-            label3.Location = new Point(549, 266);
+            label3.Location = new Point(549, 256);
             label3.Name = "label3";
             label3.Size = new Size(61, 26);
             label3.TabIndex = 7;
@@ -116,7 +118,7 @@
             // 
             label4.AutoSize = true;
             label4.ForeColor = SystemColors.ControlDarkDark;
-            label4.Location = new Point(549, 309);
+            label4.Location = new Point(549, 295);
             label4.Name = "label4";
             label4.Size = new Size(38, 26);
             label4.TabIndex = 8;
@@ -126,7 +128,7 @@
             // 
             button1.BackColor = SystemColors.ControlDarkDark;
             button1.ForeColor = SystemColors.ScrollBar;
-            button1.Location = new Point(403, 416);
+            button1.Location = new Point(401, 488);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(97, 38);
@@ -141,7 +143,7 @@
             comboBox1.ForeColor = SystemColors.ScrollBar;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "ادبی", "تاریخی", "علمی", "مذهبی", "سیاسی", "فلسفی", "داستان" });
-            comboBox1.Location = new Point(380, 350);
+            comboBox1.Location = new Point(380, 334);
             comboBox1.Margin = new Padding(3, 4, 3, 4);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(140, 34);
@@ -151,7 +153,7 @@
             // 
             label5.AutoSize = true;
             label5.ForeColor = SystemColors.ControlDarkDark;
-            label5.Location = new Point(549, 354);
+            label5.Location = new Point(549, 334);
             label5.Name = "label5";
             label5.Size = new Size(82, 26);
             label5.TabIndex = 11;
@@ -170,12 +172,34 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.ForeColor = SystemColors.ControlDarkDark;
+            label6.Location = new Point(549, 375);
+            label6.Name = "label6";
+            label6.Size = new Size(110, 26);
+            label6.TabIndex = 14;
+            label6.Text = "آیا موجود است؟";
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(411, 375);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(109, 30);
+            checkBox1.TabIndex = 15;
+            checkBox1.Text = "موجود بودن";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
             // addBook
             // 
             AutoScaleDimensions = new SizeF(9F, 26F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ScrollBar;
             ClientSize = new Size(1000, 615);
+            Controls.Add(checkBox1);
+            Controls.Add(label6);
             Controls.Add(button2);
             Controls.Add(label5);
             Controls.Add(comboBox1);
@@ -210,5 +234,7 @@
         private ComboBox comboBox1;
         private Label label5;
         private Button button2;
+        private Label label6;
+        private CheckBox checkBox1;
     }
 }

@@ -21,6 +21,8 @@ namespace library
             contentOfCombobox1();
         }
 
+        
+
         private void contentOfCombobox1()
         {
             string filePath = @"path/shelfs.txt";
@@ -60,6 +62,7 @@ namespace library
                 authorOfBook = textBox3.Text,
                 publisherOfBook = textBox4.Text,
                 categoryOfBook = comboBox1.SelectedItem.ToString(),
+                isAvailable = checkBox1.Checked,
             };
             BookWriteRead bookWriteRead = new BookWriteRead();
             bookWriteRead.bookWrite(book, filePath);

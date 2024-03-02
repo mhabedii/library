@@ -28,9 +28,9 @@ namespace library
 
             bool userFound = true;
 
-            if (userBox.Text == "hesamtabesh" && passBox.Text == "1234")
+            if (userBox.Text == "hasan" && passBox.Text == "hasan")
             {
-                this.Close();
+                this.Hide();
 
                 adminPanelForm adminPanelForm = new adminPanelForm();
                 adminPanelForm.Show();

@@ -31,9 +31,9 @@
             textBox1 = new TextBox();
             label1 = new Label();
             button1 = new Button();
-            comboBox1 = new ComboBox();
             label2 = new Label();
             button2 = new Button();
+            label3 = new Label();
             SuspendLayout();
             // 
             // textBox1
@@ -67,16 +67,6 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // comboBox1
-            // 
-            comboBox1.BackColor = SystemColors.ControlDarkDark;
-            comboBox1.ForeColor = SystemColors.ScrollBar;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(364, 378);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(134, 34);
-            comboBox1.TabIndex = 3;
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -99,15 +89,24 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.ForeColor = SystemColors.ControlDarkDark;
+            label3.Location = new Point(390, 386);
+            label3.Name = "label3";
+            label3.Size = new Size(0, 26);
+            label3.TabIndex = 6;
+            // 
             // bookSearch
             // 
             AutoScaleDimensions = new SizeF(9F, 26F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ScrollBar;
             ClientSize = new Size(900, 585);
+            Controls.Add(label3);
             Controls.Add(button2);
             Controls.Add(label2);
-            Controls.Add(comboBox1);
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(textBox1);
@@ -124,8 +123,8 @@
         private TextBox textBox1;
         private Label label1;
         private Button button1;
-        private ComboBox comboBox1;
         private Label label2;
         private Button button2;
+        private Label label3;
     }
 }

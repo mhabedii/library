@@ -28,20 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            richTextBox1 = new RichTextBox();
             label1 = new Label();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // richTextBox1
-            // 
-            richTextBox1.BackColor = SystemColors.ControlDarkDark;
-            richTextBox1.ForeColor = SystemColors.ScrollBar;
-            richTextBox1.Location = new Point(14, 91);
-            richTextBox1.Margin = new Padding(3, 4, 3, 4);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(1343, 1184);
-            richTextBox1.TabIndex = 0;
-            richTextBox1.Text = "";
             // 
             // label1
             // 
@@ -49,31 +39,41 @@
             label1.BackColor = SystemColors.ScrollBar;
             label1.Font = new Font("Vazirmatn Black", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ControlDarkDark;
-            label1.Location = new Point(548, 27);
+            label1.Location = new Point(324, 25);
             label1.Name = "label1";
             label1.Size = new Size(228, 59);
             label1.TabIndex = 1;
             label1.Text = "سیاههٔ کتاب‌ها";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(12, 87);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(849, 765);
+            dataGridView1.TabIndex = 0;
+            dataGridView1.CellFormatting += dataGridView1_CellFormatting;
             // 
             // listOfBooks
             // 
             AutoScaleDimensions = new SizeF(9F, 26F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ScrollBar;
-            ClientSize = new Size(1370, 1055);
+            ClientSize = new Size(873, 864);
+            Controls.Add(dataGridView1);
             Controls.Add(label1);
-            Controls.Add(richTextBox1);
             Font = new Font("Vazirmatn Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Margin = new Padding(3, 4, 3, 4);
             Name = "listOfBooks";
             Text = "فهرست کتاب‌ها";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private RichTextBox richTextBox1;
         private Label label1;
+        private DataGridView dataGridView1;
     }
 }

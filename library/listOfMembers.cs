@@ -15,10 +15,16 @@ namespace library
         public listOfMembers()
         {
             InitializeComponent();
-            LoadFileContent();
+            loadDataOnDataGridView1();
+            dataGridRtoL();
         }
 
-        private void LoadFileContent()
+        private void dataGridRtoL()
+        {
+            dataGridView1.RightToLeft = RightToLeft.Yes;
+        }
+
+        private void loadDataOnDataGridView1()
         {
             string filePath = @"path/users-data.txt";
 
@@ -26,21 +32,47 @@ namespace library
             FileWriteRead fileWriteRead = new FileWriteRead();
             list = fileWriteRead.Read(filePath);
 
-            foreach (Manager m in list)
-            {
-                richTextBox1.Text += m.textOfFirstName + "      ";
-                richTextBox1.Text += m.textOfLastName + "       ";
-                richTextBox1.Text += m.textOfUserName + "       ";
-                richTextBox1.Text += m.textOfEmail + "      ";
-                richTextBox1.Text += m.textOfPhoneNumber + "        ";
-                richTextBox1.Text += m.textOfAge + "        ";
-                richTextBox1.Text += m.textOfNationalId + "     " + Environment.NewLine;
-            }
-        }
+            DataGridViewTextBoxColumn firstNameColumn = new DataGridViewTextBoxColumn();
+            firstNameColumn.HeaderText = "نام";
+            firstNameColumn.DataPropertyName = "textOfFirstName";
+            dataGridView1.Columns.Add(firstNameColumn);
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
+            DataGridViewTextBoxColumn textOfLastName = new DataGridViewTextBoxColumn();
+            textOfLastName.HeaderText = "نام خانوادگی";
+            textOfLastName.DataPropertyName = "textOfLastName";
+            dataGridView1.Columns.Add(textOfLastName);
 
+            DataGridViewTextBoxColumn textOfUserName = new DataGridViewTextBoxColumn();
+            textOfUserName.HeaderText = "نام کاربری";
+            textOfUserName.DataPropertyName = "textOfUserName";
+            dataGridView1.Columns.Add(textOfUserName);
+
+            DataGridViewTextBoxColumn textOfPassword = new DataGridViewTextBoxColumn();
+            textOfPassword.HeaderText = "گذرواژه";
+            textOfPassword.DataPropertyName = "textOfPassword";
+            dataGridView1.Columns.Add(textOfPassword);
+
+            DataGridViewTextBoxColumn textOfEmail = new DataGridViewTextBoxColumn();
+            textOfEmail.HeaderText = "رایانامه";
+            textOfEmail.DataPropertyName = "textOfEmail";
+            dataGridView1.Columns.Add(textOfEmail);
+
+            DataGridViewTextBoxColumn textOfPhoneNumber = new DataGridViewTextBoxColumn();
+            textOfPhoneNumber.HeaderText = "شمارهٔ تلفن همراه";
+            textOfPhoneNumber.DataPropertyName = "textOfPhoneNumber";
+            dataGridView1.Columns.Add(textOfPhoneNumber);
+
+            DataGridViewTextBoxColumn textOfAge = new DataGridViewTextBoxColumn();
+            textOfAge.HeaderText = "سن";
+            textOfAge.DataPropertyName = "textOfAge";
+            dataGridView1.Columns.Add(textOfAge);
+
+            DataGridViewTextBoxColumn textOfNationalId = new DataGridViewTextBoxColumn();
+            textOfNationalId.HeaderText = "شناسهٔ ملی";
+            textOfNationalId.DataPropertyName = "textOfNationalId";
+            dataGridView1.Columns.Add(textOfNationalId);
+
+            dataGridView1.DataSource = list;
         }
     }
 }
