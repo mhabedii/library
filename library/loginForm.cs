@@ -65,11 +65,11 @@ namespace library
 
         private void registerBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
 
             registerForm form2 = new registerForm();
             form2.Show();
 
+            this.Hide();
         }
 
         private void loginForm_Load(object sender, EventArgs e)
