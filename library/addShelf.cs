@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.IO;
 
 namespace library
 {
@@ -18,6 +19,26 @@ namespace library
         public addShelf()
         {
             InitializeComponent();
+
+            string fileName = "shelfs.txt";
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "path");
+
+            writeTextFile(fileName, path);
+        }
+
+        private void writeTextFile(string fileName, string path)
+        {
+            string fullPath = Path.Combine(path, fileName);
+
+            if(!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+
+            if(!File.Exists(fullPath))
+            {
+                StreamWriter sw = File.CreateText(fullPath);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
