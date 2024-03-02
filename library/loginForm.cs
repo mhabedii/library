@@ -10,6 +10,26 @@ namespace library
         public loginForm()
         {
             InitializeComponent();
+
+            string fileName = "users-data.txt";
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "path");
+
+            writeTextFile(fileName, path);
+        }
+
+        private void writeTextFile(string fileName, string path)
+        {
+            string fullPath = Path.Combine(path, fileName);
+
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+
+            if (!File.Exists(fullPath))
+            {
+                StreamWriter sw = File.CreateText(fullPath);
+            }
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
